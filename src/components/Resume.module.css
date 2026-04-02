@@ -1,0 +1,223 @@
+.resumePage {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  margin-bottom: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.printBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 20px var(--glow-blue);
+}
+
+.printBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--glow-blue);
+}
+
+.printHint {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.resumeContainer {
+  background: #ffffff;
+  color: #000000; /* Pure black for LaTeX feel */
+  width: 100%;
+  max-width: 850px;
+  padding: 2.5rem 4rem;
+  border-radius: 4px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.4; /* Tighter LaTeX line height */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.2rem 0;
+  line-height: 1.2;
+}
+
+.contactBlock {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section {
+  margin-bottom: 0.6rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  margin-bottom: 0.3rem;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 0;
+}
+
+.skillsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skillRow {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.experienceItem {
+  margin-bottom: 1.2rem;
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.role {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.company {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.date {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.bulletList {
+  margin: 0.25rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.bulletList li {
+  margin-bottom: 0.25rem;
+  text-align: justify;
+}
+
+.projectItem {
+  margin-bottom: 1rem;
+}
+
+.projectName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.education {
+  font-size: 1rem;
+}
+
+/* Print Overrides */
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .resumePage {
+    padding: 0;
+    margin: 0;
+    background: white !important;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .resumeContainer {
+    box-shadow: none;
+    padding: 0.6in 0.65in; /* Matching LaTeX geometry */
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  /* Ensure colors and backgrounds print correctly */
+  .resumeContainer {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
+
+  .contactBlock {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .resumeContainer {
+    padding: 2rem;
+  }
+  
+  .expHeader {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

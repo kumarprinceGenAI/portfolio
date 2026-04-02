@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kumar Prince - Developer</title>
+  </head>
+  <body>
+    <script>
+      window.addEventListener('error', function(e) {
+        document.body.innerHTML += '<div style="color:red; background:white; font-size: 20px; z-index:9999; position:absolute; top:0; left: 0; padding: 20px;"><b>ERROR CAUGHT:</b><br/>' + e.message + '<br/>' + (e.error ? e.error.stack : '') + '</div>';
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        document.body.innerHTML += '<div style="color:red; background:white; font-size: 20px; z-index:9999; position:absolute; top:100px; left: 0; padding: 20px;"><b>PROMISE ERROR:</b><br/>' + e.reason + '</div>';
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
