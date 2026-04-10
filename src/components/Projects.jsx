@@ -38,11 +38,11 @@ const Projects = () => {
       github: 'https://github.com/kumarprinceGenAI/HR-AI-assistant'
     },
     {
-      title: 'Agentic RAG Knowledge Base',
-      description: 'A comprehensive retrieval-augmented generation document assistant that automatically updates its own vector index based on GitHub commits and webhooks.',
-      tech: ['React', 'FastAPI', 'Pinecone', 'OpenAI'],
-      link: '#',
-      github: '#'
+      title: 'Autonomous AI Travel Blog Generator',
+      description: 'A self-improving multi-agent GenAI system that researches, writes, critiques, and publishes SEO-optimized travel blogs automatically. Uses LangGraph to orchestrate real-world editorial workflows.',
+      tech: ['FastAPI', 'LangGraph', 'Gemini', 'PostgreSQL'],
+      link: 'https://travel-blog-generator.onrender.com/docs',
+      github: 'https://github.com/kumarprinceGenAI/Travel-blog-generator'
     },
     {
       title: 'Fine-Tuned Code Assistant',
